@@ -1,9 +1,7 @@
 server:
   port: 8081
-
-#spring:
-#  security:
-#    oauth2:
-#      resourceserver:
-#        jwt:
-#          issuer-uri: https://keycloak-dev-1.localdomain:8443/realms/myrealm
+keycloak:
+  auth-server-url: https://keycloak-dev-1.localdomain:8443
+  realm: myrealm
+  resource: myclient
+  public-client: true
