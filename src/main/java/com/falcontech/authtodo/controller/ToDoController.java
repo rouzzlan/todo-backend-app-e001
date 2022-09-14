@@ -1,6 +1,7 @@
 package com.falcontech.authtodo.controller;
 
 import com.falcontech.authtodo.model.ToDo;
+import com.falcontech.authtodo.model.ToDoBase;
 import com.falcontech.authtodo.service.ToDoService;
 import com.google.common.collect.ImmutableList;
 import org.springframework.http.HttpStatus;
@@ -18,8 +19,8 @@ public class ToDoController {
 
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping
-  public void postTodo(@RequestBody ToDo todo) {
-    toDoService.add(todo);
+  public void postTodo(@RequestHeader("Authorization") String authorization, @RequestBody ToDoBase toDoBase) {
+    toDoService.add(new ToDo(toDoBase));
   }
 
   @GetMapping
