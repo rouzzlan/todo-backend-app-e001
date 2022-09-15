@@ -18,6 +18,7 @@ public class ToDoService {
     toDo.setTitle("Test");
     toDo.setText("lorem ipsum");
     toDo.setWriterName("John Do");
+    toDo.setEmail("test@email.be");
     todos.add(toDo);
   }
 
