@@ -14,7 +14,7 @@ public class ToDoService {
   public ToDoService() {
     todos = new ArrayList<>();
     ToDo toDo = new ToDo();
-    toDo.setId("387ddff8-e0ad-44e5-a7a9-ffc6d9866669");
+    toDo.setUid("387ddff8-e0ad-44e5-a7a9-ffc6d9866669");
     toDo.setTitle("Test");
     toDo.setText("lorem ipsum");
     toDo.setWriterName("John Do");
